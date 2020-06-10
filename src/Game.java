@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.util.Random;
 
 public class Game {
     static public void zgadywanie (String word, int chance) {
         char[] scaner = new char[word.length()]; // przypisuje do zmiennej długość słowa
         int i = 0;
         while (i < word.length()) {
-            scaner[i] = '-';
+            scaner[i] = '_';
             if (word.charAt(i)==' ') { //zwraca znak znajdujacy sie pod wskazanym indeksem
                 scaner[i] =' ';
             }
@@ -30,7 +30,6 @@ public class Game {
             }
             x= Character.toUpperCase(x);
             l.add(x);
-            2
             if (word.contains(x+"")) {
 
                 for (int y=0; y<word.length(); y++) { //petla sprawdza indeksy
@@ -125,25 +124,28 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
         int level = scanner.nextInt();
         String word;
-        int chance = 5;  // ilość żyć
+        int chance = 5;  // ilość szans
         switch (level) {
             case 1:
                 System.out.println("Poziom łatwy");
-                String[] easy = "TEST KOD STYL KLASA OBIEKT BLOK IMPORT LISTA TYP STOS";  //tablica ze słowami
-                word= easy;
-                zgadywanie(word, chance);
+                String[] easy = {"TEST","KOD", "STYL", "KLASA", "OBIEKT", "BLOK", "IMPORT", "LISTA", "TYP", "STOS"};  //tablica ze słowami
+                Random random= new Random();
+                word = easy[random.nextInt(easy.length)];
+                zgadywanie(word,chance);
                 break;
             case 2:
                 System.out.println("Poziom średni");
-                String midi = "WARUNEK" , "INTERFEJS", "PAKIET", "KOLEKCJA", "APLIKACJA", "PARAMETR", "TABLICA", "LAMBDA", "HIERARCHIA", "ZASADY";
-                word= midi;
-                zgadywanie(word, chance);
+                String[] midi = {"WARUNEK" , "INTERFEJS", "PAKIET", "KOLEKCJA", "APLIKACJA", "PARAMETR", "TABLICA", "LAMBDA", "HIERARCHIA", "ZASADY"};
+                Random random2= new Random();
+                word = midi[random2.nextInt(midi.length)];
+                zgadywanie(word,chance);
                 break;
             case 3:
                 System.out.println("Poziom trudny");
-                String hard = "DEINKREMENTACJA","INKREMENTACJA", "POLIANDROM", "DZIEDZICZENIE", "REPOZYTORIUM", "POLIMORFIZM", "KONSTRUKTOR", "DOKUMENTACJA", "HERMETYZACJA", "REFERENCJA";
-                word= hard;
-                zgadywanie(word, chance);
+                String[] hard =  {"DEINKREMENTACJA","INKREMENTACJA", "POLIANDROM", "DZIEDZICZENIE", "REPOZYTORIUM", "POLIMORFIZM", "KONSTRUKTOR", "DOKUMENTACJA", "HERMETYZACJA", "REFERENCJA"};
+                Random random3= new Random();
+                word = hard[random3.nextInt(hard.length)];
+                zgadywanie(word,chance);
             default:
                 System.out.println("Zły wybór");
         }
