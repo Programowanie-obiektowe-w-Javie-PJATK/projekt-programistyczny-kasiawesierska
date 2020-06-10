@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Game {
-    static public void zgadywanie(String word, int chance) {
-        char[] scaner = new char[word.length()]; // przypisuje do zmiennej długość słowa
+    static public void zgadywanie(String word1, int chance) {
+        char[] scaner = new char[word1.length()]; // przypisuje do zmiennej długość słowa
         int i = 0;
-        while (i < word.length()) {
+        while (i < word1.length()) {
             scaner[i] = '-';
-            if (word.charAt(i) == ' ') {
+            if (word1.charAt(i) == ' ') { //zwraca znak znajdujacy sie pod wskazanym indeksem
                 scaner[i] = ' ';
             }
             i++;
@@ -26,9 +26,9 @@ public class Game {
             l.add(x);
 
 
-            if (word.contains(x+"")) {
-                for (int y=0; y<word.length(); y++) {  //petal sprawdza indeksy
-                    if (word.charAt(y)==x) { //zamiana znaku '-'
+            if (word1.contains(x+" ")) {
+                for (int y=0; y<word1.length(); y++) {  //petal sprawdza indeksy
+                    if (word1.charAt(y)==x) { //zamiana znaku '-'
                         scaner[y]=x;  //na litere
                     }
                 }
@@ -37,7 +37,7 @@ public class Game {
                 chance--;  //inktementacja zmiennej gdy błędne litery
             }
 
-            if (word.equals(String.valueOf(scaner))) { //  sprawdza czy wygrana
+            if (word1.equals(String.valueOf(scaner))) { //  sprawdza czy wygrana
                 System.out.println(scaner);
                 System.out.println("Zgadłeś! Wygrałeś!");
                 break; //przerywa petle
@@ -51,10 +51,65 @@ public class Game {
         }
 
 
-
-
     }
 
+
+    public void man_death()
+    {
+        System.out.println("_____");
+        System.out.println("|   |");
+        System.out.println("|   o");
+        System.out.println("|  /|\\"); //why the double \\, because the \ has special meaning
+        System.out.println("|  / \\"); //and so using 2 tell Java to just print the 2nd
+    }
+
+    public void man_0() {
+        System.out.println("_____");
+        System.out.println("|   |");
+        System.out.println("|   ");
+        System.out.println("|   "); //why the double \\, because the \ has special meaning
+        System.out.println("|   "); //and so using 2 tell Java to just print the 2nd
+    }
+
+    public void man_1() {
+        System.out.println("_____");
+        System.out.println("|   |");
+        System.out.println("|   o");
+        System.out.println("|    "); //why the double \\, because the \ has special meaning
+        System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+    }
+
+    public void man_2() {
+        System.out.println("_____");
+        System.out.println("|   |");
+        System.out.println("|   o");
+        System.out.println("|   | "); //why the double \\, because the \ has special meaning
+        System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+    }
+
+    public void man_3() {
+        System.out.println("_____");
+        System.out.println("|   |");
+        System.out.println("|   o");
+        System.out.println("|  /| "); //why the double \\, because the \ has special meaning
+        System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+    }
+
+    public void man_4() {
+        System.out.println("_____");
+        System.out.println("|   |");
+        System.out.println("|   o");
+        System.out.println("|  /|\\ "); //why the double \\, because the \ has special meaning
+        System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+    }
+
+    public void man_5() {
+        System.out.println("_____");
+        System.out.println("|   |");
+        System.out.println("|   o");
+        System.out.println("|  /|\\ "); //why the double \\, because the \ has special meaning
+        System.out.println("|    \\"); //and so using 2 tell Java to just print the 2nd
+    }
 
     public static void main(String[] args) {
         System.out.println("GRA WISIELEC");
