@@ -114,7 +114,7 @@ public class Game {
                     case 5:
                         man_1();
                         break;
-
+                    default:
                 }
             }
 
@@ -126,7 +126,7 @@ public class Game {
             System.out.println(scaner);
             System.out.println("Pozostało żyć = " + chance);
 
-            /*System.out.println("Koło ratunkowe! Wciśnij T");
+            /*System.out.println("Koło ratunkowe! Wciśnij H");
             Scanner scanner = new Scanner(System.in);
             int help = scanner.nextInt(); */
 
@@ -147,9 +147,6 @@ public class Game {
                         }
                     }
                 }
-
-
-
             }
     }*/
 
