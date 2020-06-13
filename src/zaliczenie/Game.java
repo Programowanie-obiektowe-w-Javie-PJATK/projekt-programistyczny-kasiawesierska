@@ -1,8 +1,8 @@
 package zaliczenie;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Game {
     private char[] word;
@@ -71,6 +71,7 @@ public class Game {
             }
             i++;
         }
+        System.out.println("Twoje słowo to: ");
         System.out.println(scaner);
         System.out.println("Pozostało żyć = " + chance);
         man_0();
@@ -164,21 +165,21 @@ public class Game {
         int chance = 6;  // ilość szans
         switch (level) {
             case 1:
-                System.out.println("Poziom łatwy");
+                System.out.println("Wybrano poziom łatwy");
                 String[] easy = {"TEST", "KOD", "STYL", "KLASA", "OBIEKT", "BLOK", "IMPORT", "LISTA", "TYP", "STOS"};  //tablica ze słowami
                 Random random1= new Random();
                 word = easy[random1.nextInt(easy.length)];
                 playGame(word,chance);
                 break;
             case 2:
-                System.out.println("Poziom średni");
+                System.out.println("Wybrano poziom średni");
                 String[] midi = {"WARUNEK" , "INTERFEJS", "PAKIET", "KOLEKCJA", "APLIKACJA", "PARAMETR", "TABLICA", "LAMBDA", "HIERARCHIA", "ZASADY"};
                 Random random2= new Random();
                 word = midi[random2.nextInt(midi.length)];
                 playGame(word,chance);
                 break;
             case 3:
-                System.out.println("Poziom trudny");
+                System.out.println("Wybrano poziom trudny");
                 String[] hard =  {"DEINKREMENTACJA","INKREMENTACJA", "POLIANDROM", "DZIEDZICZENIE", "REPOZYTORIUM", "POLIMORFIZM", "KONSTRUKTOR", "DOKUMENTACJA", "HERMETYZACJA", "REFERENCJA"};
                 Random random3= new Random();
                 word = hard[random3.nextInt(hard.length)];
