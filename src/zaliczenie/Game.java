@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+
+
 public class Game {
     private char[] word;
     public static void man_death()
@@ -30,8 +32,8 @@ public class Game {
         System.out.println("_____");
         System.out.println("|   |");
         System.out.println("|   o");
-        System.out.println("|    "); //why the double \\, because the \ has special meaning
-        System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+        System.out.println("|    ");
+        System.out.println("|    ");
         System.out.println("    ");
 
     }
@@ -40,8 +42,8 @@ public class Game {
         System.out.println("_____");
         System.out.println("|   |");
         System.out.println("|   o");
-        System.out.println("|   | "); //why the double \\, because the \ has special meaning
-        System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+        System.out.println("|   | ");
+        System.out.println("|    ");
         System.out.println("    ");
 
     }
@@ -50,8 +52,8 @@ public class Game {
         System.out.println("_____");
         System.out.println("|   |");
         System.out.println("|   o");
-        System.out.println("|  /| "); //why the double \\, because the \ has special meaning
-        System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+        System.out.println("|  /| ");
+        System.out.println("|    ");
         System.out.println("    ");
 
     }
@@ -112,6 +114,7 @@ public class Game {
                         scaner[y] = x;  //na litere
                     }
                 }
+
             } else {
                 chance--;  //inktementacja zmiennej gdy błędne litery
                 switch(chance){
@@ -141,6 +144,9 @@ public class Game {
             }
             System.out.println(scaner);
             System.out.println("Pozostało żyć = " + chance);
+            System.out.println("________________________________________");
+
+
 
             /*System.out.println("Koło ratunkowe! Wciśnij H");
             Scanner scanner = new Scanner(System.in);
