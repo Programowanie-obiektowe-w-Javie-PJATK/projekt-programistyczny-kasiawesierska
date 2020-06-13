@@ -13,6 +13,8 @@ public class Game {
         System.out.println("|   o");
         System.out.println("|  /|\\"); //why the double \\, because the \ has special meaning
         System.out.println("|  / \\"); //and so using 2 tell Java to just print the 2nd
+        System.out.println("    ");
+
     }
 
     public static void man_0() {
@@ -21,6 +23,8 @@ public class Game {
         System.out.println("|   ");
         System.out.println("|   ");
         System.out.println("|   ");
+        System.out.println("    ");
+
     }
     public static void man_1() {
         System.out.println("_____");
@@ -28,6 +32,8 @@ public class Game {
         System.out.println("|   o");
         System.out.println("|    "); //why the double \\, because the \ has special meaning
         System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+        System.out.println("    ");
+
     }
 
     public static void man_2() {
@@ -36,6 +42,8 @@ public class Game {
         System.out.println("|   o");
         System.out.println("|   | "); //why the double \\, because the \ has special meaning
         System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+        System.out.println("    ");
+
     }
 
     public static void man_3() {
@@ -44,6 +52,8 @@ public class Game {
         System.out.println("|   o");
         System.out.println("|  /| "); //why the double \\, because the \ has special meaning
         System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+        System.out.println("    ");
+
     }
 
     public static void man_4() {
@@ -52,6 +62,8 @@ public class Game {
         System.out.println("|   o");
         System.out.println("|  /|\\ "); //why the double \\, because the \ has special meaning
         System.out.println("|    "); //and so using 2 tell Java to just print the 2nd
+        System.out.println("    ");
+
     }
     public static void man_5() {
         System.out.println("_____");
@@ -59,6 +71,8 @@ public class Game {
         System.out.println("|   o");
         System.out.println("|  /|\\ "); //why the double \\, because the \ has special meaning
         System.out.println("|    \\"); //and so using 2 tell Java to just print the 2nd
+        System.out.println("    ");
+
     }
 
     static public void playGame (String word, int chance) {
@@ -79,9 +93,10 @@ public class Game {
 
         Scanner s = new Scanner(System.in); // wpisywanie liter
         ArrayList<Character> l = new ArrayList<>(); //tu wpisywac bedziemy liter
-        System.out.println("Podaj litere");
 
         while (chance > 0) {
+            System.out.println("Podaj litere: ");
+
             char x = s.next().charAt(0); // znak wczytywany przez uzytkownika
 
             if (l.contains(x)) {
@@ -133,8 +148,9 @@ public class Game {
 
 
             if (chance == 0) {
-                System.out.println("Koniec szans, przegrałeś"); //zero szans = przegrana
+                System.out.println("Koniec szans, przegrałeś!"); //zero szans = przegrana
                 man_death();
+                System.out.println("Odpowiedź to: " + word);
             }
         }
     }
