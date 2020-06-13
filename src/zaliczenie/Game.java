@@ -73,7 +73,7 @@ public class Game {
         }
         System.out.println(scaner);
         System.out.println("Pozostało żyć = " + chance);
-
+        man_0();
 
 
         Scanner s = new Scanner(System.in); // wpisywanie liter
@@ -101,14 +101,19 @@ public class Game {
                 switch(chance){
                     case 1:
                         man_5();
+                        break;
                     case 2:
                         man_4();
+                        break;
                     case 3:
                         man_3();
+                        break;
                     case 4 :
                         man_2();
+                        break;
                     case 5:
                         man_1();
+                        break;
 
                 }
             }
